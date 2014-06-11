@@ -1,0 +1,363 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+h1,h2,h3 {
+	font-weight: normal;
+}
+li {
+	list-style: none;
+}
+img {
+	border: none;
+}
+a {
+	color: #666;
+	text-decoration: none;
+}
+a:hover {
+	color: #333;
+}
+.clearfix:before, .clearfix:after {
+	display: table;
+	content: "";
+	line-height: 0;
+}
+.clearfix:after {
+	clear: both;
+}
+.clearfix {
+	zoom: 1;
+}
+body {
+	font: 14px/1.5 Consolas,微软雅黑;
+	background-color: #eee;
+	color: #666;
+}
+::selection {
+	background-color: #ccc;
+}
+.container {
+	width: 960px;
+	margin: 0 auto;
+}
+.topbar {
+	width: 100%;
+	height: 25px;
+	padding-top: 7px;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 1000;
+	background: -webkit-linear-gradient(top,rgba(44,44,44,0.72),rgba(16,16,16,0.72));
+	filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#B82C2C2C,endColorstr=#B8101010);
+	border-bottom: 2px solid #ccc;
+	color: #ccc;
+	font-size: 12px;
+}
+.site-info {
+	float: left;
+}
+.music-player {
+	float: right;
+}
+.music-logo {
+	float: left;
+}
+.music-controller {
+	float: left;
+	margin-left: 20px;
+}
+.music-controller li {
+	float: left;
+}
+.pre {
+	display: none;
+}
+.play-btn {
+	-margin: 0 10px;
+	cursor: pointer;
+}
+.next {
+	display: none;
+}
+.music-name {
+	float: left;
+	width: 140px;
+	text-align: center;
+	background-color: #ccc;
+	color: green;
+	margin-left: 20px;
+	border-radius: 2px;
+}
+.header {
+	min-width: 100%;
+	min-height: 76px;
+	background-color: #f8f8f8;
+	border-bottom: 1px solid #b0b0b0;
+	padding-top: 46px;
+	margin-bottom: 16px;
+	box-shadow: 0 0 10px #ccc;
+}
+.logo {
+	float: left;
+	text-shadow: 0 1px 1px #fff;
+}
+.logo a {
+	display: block;
+	font-size: 26px;
+}
+.logo h3 {
+	font-size: 14px;
+}
+.nav {
+	margin-top: 10px;
+	float: right;
+	position: relative;
+}
+.nav li {
+	float: left;
+	margin-top: 10px;
+	margin-left: 12px;
+}
+.nav a {
+	font-weight: bold;
+}
+.nav .active {
+	color: #333;
+}
+.nav-btn {
+	display: none;
+	float: right;
+	width: 24px;
+	height: 24px;
+	background: url(../images/menu.png) no-repeat center;
+	cursor: pointer;
+	margin-top: 20px;
+}
+.scale-nav-w {
+	display: none;
+	margin: 10px 0;
+    background-color: #333;
+}
+.scale-nav ul {
+	padding: 10px 0;
+}
+.scale-nav li {
+	border-top: 1px solid #444;
+	border-bottom: 1px solid #222;
+}
+.scale-nav .scale-nav-item-first {
+	border-top: none;
+}
+.scale-nav .scale-nav-item-last {
+	border-bottom: none;
+}
+.scale-nav a {
+	display: block;
+	color: #fff;
+	padding: 10px;
+}
+.scale-nav a:hover {
+	background-color: #444;
+}
+.bottom-line {
+	display: none;
+	width: 56px;
+	height: 4px;
+	background-color: #333;
+	position: absolute;
+	top: 27px;
+	left: 12px;
+}
+.content {}
+.section {
+	margin: 20px 0;
+}
+.section h2 {
+	padding: 10px 0;
+	text-shadow: 0 1px 1px #fff;
+	font-weight: 700;
+	font-size: 16px;
+}
+.resume {}
+.japan {
+	padding-left: 10px;
+	font-family: Helvetica,Arial,sans-serif;
+	-font-weight: normal;
+	font-size: 12px;
+}
+.resume-w {
+	padding: 30px 30px 0;
+	background: -webkit-linear-gradient(top,#F6F6F6,#F2F2F2);
+	filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#F6F6F6,endColorstr=#F2F2F2);
+	box-shadow: 0px 0px 5px #CCC;
+	border: 1px solid #d4d4d4;
+}
+.resume-info {
+	float: left;
+}
+.resume-info-section {
+	-width: 400px;
+	float: left;
+	margin: 0 30px 30px 0;
+}
+.resume-info-section:hover {
+	background-color: #fff;
+}
+.resume-info-section h3 {
+	font-size: 16px;
+	color: #333;
+}
+.resume-info-section table {
+
+}
+.resume-header {
+	float: right;
+}
+.work {}
+.work .fw {
+	width: 960px;
+	overflow: hidden;
+}
+.work-items {
+	width: 990px;
+}
+.work-items li {
+	float: left;
+	margin: 0 30px 30px 0;
+	width: 300px;
+	height: 250px;
+	background-color: #f8f8f8;
+	-border: 1px solid #d4d4d4;
+	box-shadow: 0 0 5px #ccc;
+}
+.work-items img {
+	width: 300px;
+	height: 250px;
+}
+.contact {
+	margin-top: -30px;
+}
+.contact p {
+	display: none;
+	line-height: 180%;
+}
+.social {
+
+}
+.social li {
+	float: left;
+	margin-right: 20px;
+}
+.social-logo {
+	width: 265px;
+	margin: 0 auto;
+}
+.email,
+.github,
+.weibo,
+.qq,
+.weixin {
+	opacity: .5;
+	filter: alpha(opacity=50);
+}
+.email:hover,
+.github:hover,
+.weibo:hover,
+.qq:hover,
+.weixin:hover {
+	opacity: 1;
+	filter: alpha(opacity=100);
+}
+.footer {
+	min-width: 100%;
+	height: 76px;
+	background-color: #f8f8f8;
+	color: #999;
+	border-top: 1px solid #b0b0b0;
+	box-shadow: 0 0 10px #ccc;
+	font: 12px Verdana,微软雅黑;
+	text-align: center;
+	line-height: 76px;
+}
+.site-message {
+	display: none;
+	height: 38px;
+	width: 480px;
+	background-color: #000;
+	opacity: .5;
+	filter: alpha(opacity=50);
+	position: fixed;
+	top: 136px;
+	left: 50%;
+	margin-left: -240px;
+	text-align: center;
+	line-height: 38px;
+	color: #fff;
+	border-radius: 8px;
+}
+/* 窗口宽度<960,设计宽度=768 */
+@media screen and (max-width:959px){
+      .container {
+      	max-width: 768px;
+      }
+      .work .fw {
+      	margin: 0 auto;
+      	width: 768px;
+      }
+      .work-items {
+      	width: 798px;
+      }
+      .work-items li {
+      	width: 369px;
+      	height: 308px;
+      }
+      .work-items img {
+      	width: 369px;
+      	height: 308px;
+      }
+      .music-name {
+      	display: none;
+      }
+}
+/* 窗口宽度<768,设计宽度=640 */
+@media screen and (max-width:767px){
+      .container {
+      	max-width: 640px;
+      }
+      .nav {
+      	display: none;
+      }
+      .nav-btn {
+      	display: block;
+      }
+      .work .fw {
+      	margin: 0 auto;
+      	width: 480px;
+      }
+      .work-items {
+      	width: 480px;
+      }
+      .work-items li {
+      	margin-right: 0;
+      	width: 480px;
+      	height: 400px;
+      }
+      .work-items img {
+      	width: 480px;
+      	height: 400px;
+      }
+      .music-logo {
+      	display: none;
+      }
+      .play-btn {
+      	margin-right: 2px;
+      }
+}
+/* 窗口宽度<640,设计宽度=480 */
+@media screen and (max-width:639px){
+      .container {
+      	max-width: 480px;
+      }
+}
