@@ -297,6 +297,10 @@ body {
 	color: #fff;
 	border-radius: 8px;
 }
+.baidu {
+	display: none;
+}
+
 /* 窗口宽度<960,设计宽度=768 */
 @media screen and (max-width:959px){
       .container {
