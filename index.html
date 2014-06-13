@@ -60,7 +60,7 @@
 							<a href="#">和我联系</a>
 						</li>
 						<li>
-							<a href="#">English</a>
+							<a href="/en/">English</a>
 						</li>
 					</ul>
 					<div class="bottom-line"></div>
@@ -88,7 +88,7 @@
 							<a href="#">和我联系</a>
 						</li>
 						<li>
-							<a href="#">English</a>
+							<a href="/en/">English</a>
 						</li>
 						<li class="scale-nav-item-last"></li>
 					</ul>
@@ -254,10 +254,21 @@
 	<script>
 
 		$(function() {
-			$('.chinese').click(function() {
-				$('.mask').fadeOut();
-				$('.site-wrap').fadeOut();
-			});
+			if($.cookie('visited')  == undefined) {
+				$('.mask').show();
+				$('.site-wrap').show();
+				$('.chinese').click(function() {
+					$.cookie('visited', 1, { expires: 7 });
+					$('.mask').fadeOut();
+					$('.site-wrap').fadeOut();
+				});
+				$('english').click(function() {
+					$.cookie('visited', 1, { expires: 7 });
+				});
+			} else {
+				
+			}
+			
 		});
 		
 		$(function() {
@@ -319,13 +330,12 @@
 		});
 
 		$(function() {
-			$.cookie('visited', 'true', { expires: 7 });
+			console.log($.cookie('visited'));
+			
 		});
 
 		$(function() {
-			setTimeout(function() {
-				console.log($.cookie('visited'));
-			}, 3000);
+				
 		});
 	</script>
 

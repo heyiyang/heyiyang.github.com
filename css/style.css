@@ -301,6 +301,7 @@ body {
 	display: none;
 }
 .mask {
+	display: none;
 	position: fixed;
 	left: 0;
 	top: 0;
@@ -310,6 +311,7 @@ body {
 	z-index: 999;
 }
 .site-wrap {
+	display: none;
 	position: fixed;
 	left: 0;
 	top: 50%;
