@@ -296,6 +296,7 @@ body {
 	line-height: 38px;
 	color: #fff;
 	border-radius: 8px;
+	z-index: 1001;
 }
 .baidu {
 	display: none;
