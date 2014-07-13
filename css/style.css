@@ -139,6 +139,8 @@ body {
 	display: none;
 	margin: 10px 0;
     background-color: #333;
+    position: absolute;
+	width: 100%;
 }
 .scale-nav ul {
 	padding: 10px 0;
