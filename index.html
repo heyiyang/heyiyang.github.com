@@ -46,19 +46,19 @@
 					<div class="nav">
 						<ul class="clearfix">
 							<li>
-								<a href="#resume">个人简历</a>
+								<a href="#resume" class="resume-link">个人简历</a>
 							</li>
 							<li>
-								<a href="#work">学习作品</a>
+								<a href="#work" class="work-link">学习作品</a>
 							</li>
 							<li>
 								<a href="http://blog.icoolyang.com">我的博客</a>
 							</li>
 							<li>
-								<a href="#concat">和我联系</a>
+								<a href="#concat" class="concat-link">和我联系</a>
 							</li>
 							<li>
-								<a href="#comment">留言簿</a>
+								<a href="#comment" class="comment-link">留言簿</a>
 							</li>
 							<li>
 								<a href="/en/">English</a>
@@ -74,19 +74,19 @@
 					<div class="scale-nav">
 						<ul class="">
 							<li class="scale-nav-item-first">
-								<a href="#resume">个人简历</a>
+								<a href="#resume" class="resume-link">个人简历</a>
 							</li>
 							<li>
-								<a href="#work">学习作品</a>
+								<a href="#work" class="work-link">学习作品</a>
 							</li>
 							<li>
 								<a href="http://blog.icoolyang.com">我的博客</a>
 							</li>
 							<li>
-								<a href="#concat">和我联系</a>
+								<a href="#concat" class="concat-link">和我联系</a>
 							</li>
 							<li>
-								<a href="#comment">留言簿</a>
+								<a href="#comment" class="comment-link">留言簿</a>
 							</li>
 							<li>
 								<a href="/en/">English</a>
@@ -97,7 +97,8 @@
 				</div>
 			</div>
 		</div>
-		<section class="content container">
+		<section class="content container" id="all-section">
+			<div class="section-overlay" style="display: none;"></div>
 			<div class="resume section" id="resume">
 				<h2>个人简历<span class="japan">(•̀ᴗ•́)و ̑̑ </span></h2>
 				<div class="resume-w clearfix">
@@ -233,7 +234,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="content container">
+		<section class="content container" id="comment-section" style="display: none;">
 			<div class="comment section" id="comment">
 				<h2>留言簿<span class="japan">(•̀ᴗ•́)و ̑̑ </span></h2>
 				<div class="comment-w clearfix">
@@ -346,7 +347,31 @@
 		});
 
 		$(function() {
-				
+			var timer = null;
+			$('.comment-link').click(function() {
+				clearInterval(timer);
+				$('.section-overlay').show();
+				timer = setTimeout(function() {
+					$('#all-section').hide();
+					$('#comment-section').fadeIn();
+				}, 2000);
+			});
+
+			$('.resume-link').click(function() {
+				$('#comment-section').hide();
+				$('.section-overlay').hide();
+				$('#all-section').fadeIn();
+			});
+			$('.work-link').click(function() {
+				$('#comment-section').hide();
+				$('.section-overlay').hide();
+				$('#all-section').fadeIn();
+			});
+			$('.concat-link').click(function() {
+				$('#comment-section').hide();
+				$('.section-overlay').hide();
+				$('#all-section').fadeIn();
+			});
 		});
 	</script>
 
