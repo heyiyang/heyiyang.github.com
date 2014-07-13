@@ -9,7 +9,6 @@
 	<link href="favicon.ico" rel="Bookmark">
 	<link rel="stylesheet" href="css/style.css">
 	<script src="js/jquery.min.js"></script>
-	<script src="js/jquery.sliphover.min.js"></script>
 	<script src="js/jquery.cookie.js"></script>
 </head>
 <body>
@@ -260,18 +259,14 @@
 					$('.mask').fadeOut();
 					$('.site-wrap').fadeOut();
 				});
-				$('english').click(function() {
+				$('.english').click(function() {
 					$('.wrapper').show();
 					$.cookie('visited', 1, { expires: 7 });
 				});
 			} else {
-				
+				$('.wrapper').show();
 			}
 			
-		});
-		
-		$(function() {
-			$('#hover').sliphover();
 		});
 
 		$(function() {
