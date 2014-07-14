@@ -12,7 +12,7 @@
 	<script src="js/jquery.cookie.js"></script>
 </head>
 <body>
-	<div class="wrapper" style="display: none;">
+	<div class="wrapper" style="display: block;">
 		<div class="topbar">
 			<div class="container clearfix">
 				<p class="site-info">何毅洋 同学的技术博客<span class="txt_hide">，主页和作品页托管在GiHub，博客托管在SAE</span> ^_^</p>
@@ -166,32 +166,32 @@
 					<ul class="work-items clearfix">
 						<li>
 							<a href="/works/mi/">
-								<img src="images/pictures/1.gif">
+								<img data-src="images/pictures/1.gif" src="" alt="">
 							</a>
 						</li>
 						<li>
 							<a href="#">
-								<img src="images/pictures/2.gif">
+								<img data-src="images/pictures/2.gif" src="" alt="">
 							</a>
 						</li>
 						<li>
 							<a href="/works/alipay/">
-								<img src="images/pictures/3.gif">
+								<img data-src="images/pictures/3.gif" src="" alt="">
 							</a>
 						</li>
 						<li>
 							<a href="#">
-								<img src="images/pictures/4.gif">
+								<img data-src="images/pictures/4.gif" src="" alt="">
 							</a>
 						</li>
 						<li>
 							<a href="#">
-								<img src="images/pictures/5.gif">
+								<img data-src="images/pictures/5.gif" src="" alt="">
 							</a>
 						</li>
 						<li>
 							<a href="#">
-								<img src="images/pictures/6.gif">
+								<img data-src="images/pictures/6.gif" src="" alt="">
 							</a>
 						</li>
 					</ul>
@@ -269,25 +269,25 @@
 	</div>
 	<script>
 
-		$(function() {
-			if($.cookie('visited')  == undefined) {
-				$('.mask').show();
-				$('.site-wrap').show();
-				$('.chinese').click(function() {
-					$('.wrapper').show();
-					$.cookie('visited', 1, { expires: 7 });
-					$('.mask').fadeOut();
-					$('.site-wrap').fadeOut();
-				});
-				$('.english').click(function() {
-					$('.wrapper').show();
-					$.cookie('visited', 1, { expires: 7 });
-				});
-			} else {
-				$('.wrapper').show();
-			}
+		// $(function() {
+		// 	if($.cookie('visited')  == undefined) {
+		// 		$('.mask').show();
+		// 		$('.site-wrap').show();
+		// 		$('.chinese').click(function() {
+		// 			$('.wrapper').show();
+		// 			$.cookie('visited', 1, { expires: 7 });
+		// 			$('.mask').fadeOut();
+		// 			$('.site-wrap').fadeOut();
+		// 		});
+		// 		$('.english').click(function() {
+		// 			$('.wrapper').show();
+		// 			$.cookie('visited', 1, { expires: 7 });
+		// 		});
+		// 	} else {
+		// 		$('.wrapper').show();
+		// 	}
 			
-		});
+		// });
 
 		$(function() {
 			setTimeout(function() {
@@ -296,6 +296,22 @@
 			setTimeout(function() {
 				$('.site-message').fadeOut();
 			}, 6000);
+		});
+
+		$(function() {
+			// images preloader
+			$('.work-items img').each(function() {
+			  $(this).css({
+			    opacity: 0
+			  }).load(function() {
+			    $(this).animate({
+			      opacity: 1
+			    }, 1000);
+			  }).attr('src', $(this).data('src'))
+			  // wait and remove data-src
+			  .delay(100)
+			  .attr('data-src','');
+			});
 		});
  
 		$(function() {
