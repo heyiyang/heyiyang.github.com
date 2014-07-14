@@ -248,6 +248,7 @@ body {
 	box-shadow: 0 0 5px #ccc;
 }
 .work-items a {
+	position: relative;
 	display: inline-block;
 	width: 100%;
 	height: 100%;
@@ -256,6 +257,24 @@ body {
 .work-items img {
 	width: 300px;
 	height: 250px;
+}
+.work-items .item-img-mask {
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0, 0.6);
+	color: #fff;
+	text-align: center;
+}
+.item-img-mask h4 {
+	margin-top: 50px;
+	font-size: 20px;
+}
+.item-img-mask p {
+	margin-top: 10px;
 }
 .contact {
 	margin-top: -30px;

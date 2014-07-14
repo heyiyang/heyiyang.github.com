@@ -167,31 +167,55 @@
 						<li>
 							<a href="/works/mi/">
 								<img data-src="images/pictures/1.gif" src="" alt="">
+								<div class="item-img-mask">
+									<h4>MI</h4>
+									<p>小米网站首页</p>
+								</div>
 							</a>
 						</li>
 						<li>
 							<a href="#">
 								<img data-src="images/pictures/2.gif" src="" alt="">
+								<div class="item-img-mask">
+									<h4>QQ网购</h4>
+									<p>腾讯QQ网购网站首页</p>
+								</div>
 							</a>
 						</li>
 						<li>
 							<a href="/works/alipay/">
 								<img data-src="images/pictures/3.gif" src="" alt="">
+								<div class="item-img-mask">
+									<h4>alipay</h4>
+									<p>支付宝网站首页</p>
+								</div>
 							</a>
 						</li>
 						<li>
 							<a href="#">
 								<img data-src="images/pictures/4.gif" src="" alt="">
+								<div class="item-img-mask">
+									<h4>响应式</h4>
+									<p>响应式网站制作</p>
+								</div>
 							</a>
 						</li>
 						<li>
 							<a href="#">
 								<img data-src="images/pictures/5.gif" src="" alt="">
+								<div class="item-img-mask">
+									<h4>暂无</h4>
+									<p></p>
+								</div>
 							</a>
 						</li>
 						<li>
 							<a href="#">
 								<img data-src="images/pictures/6.gif" src="" alt="">
+								<div class="item-img-mask">
+									<h4>暂无</h4>
+									<p></p>
+								</div>
 							</a>
 						</li>
 					</ul>
@@ -289,14 +313,14 @@
 			
 		// });
 
-		$(function() {
-			setTimeout(function() {
-				$('.site-message').fadeIn();
-			}, 2000);
-			setTimeout(function() {
-				$('.site-message').fadeOut();
-			}, 6000);
-		});
+		// $(function() {
+		// 	setTimeout(function() {
+		// 		$('.site-message').fadeIn();
+		// 	}, 2000);
+		// 	setTimeout(function() {
+		// 		$('.site-message').fadeOut();
+		// 	}, 6000);
+		// });
 
 		$(function() {
 			// images preloader
@@ -311,6 +335,15 @@
 			  // wait and remove data-src
 			  .delay(100)
 			  .attr('data-src','');
+			});
+		});
+
+		$(function() {
+			$('.work-items a').mouseover(function() {
+				$(this).children('div').show();
+			});
+			$('.work-items a').mouseout(function() {
+				$(this).children('div').hide();
 			});
 		});
  
