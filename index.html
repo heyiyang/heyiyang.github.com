@@ -35,7 +35,7 @@
 					<audio src="assets/1.mp3"></audio>
 				</div>
 			</div>
-		</div>
+		</div><!-- #topbar -->
 		<div class="header">
 			<div class="container">
 				<div class="clearfix">
@@ -96,7 +96,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div><!-- #header -->
 		<section class="content container" id="all-section">
 			<div class="section-overlay" style="display: none;">
 				<img src="images/loading.gif">
@@ -259,7 +259,7 @@
 					</div>
 				</div>
 			</div>
-		</section>
+		</section><!-- #all-section -->
 		<section class="content container" id="comment-section" style="display: none;">
 			<div class="comment section" id="comment">
 				<h2>留言簿<span class="japan">(•̀ᴗ•́)و ̑̑ </span></h2>
@@ -270,27 +270,27 @@
 					<!-- UY END -->
 				</div>
 			</div>
-		</section>
+		</section><!-- #comment-section -->
 		<div class="footer">
 			<p>Copyright ©2014 He. All rights reserved</p>
-		</div>
+		</div><!-- #footer -->
 	</div>
-	<div class="site-message">
+	<!-- <div class="site-message">
 		<p>个人博客主页制作中，暂未完成。。。</p>
-	</div>
+	</div> -->
 	<div class="baidu">
 		<script type="text/javascript">
 		var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
 		document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F649b61685e03a700fd90ffd8db59f9f6' type='text/javascript'%3E%3C/script%3E"));
 		</script>
-	</div>
-	<div class="mask"></div>
+	</div><!-- #baidu -->
+	<!-- <div class="mask"></div>
 	<div class="site-wrap">
 		<div class="choose-site">
 			<a href="#" class="chinese">中文站点</a>
 			<a href="en/index.html" class="english">English</a>
 		</div>
-	</div>
+	</div> -->
 	<script>
 
 		// $(function() {
@@ -321,6 +321,19 @@
 		// 		$('.site-message').fadeOut();
 		// 	}, 6000);
 		// });
+		
+		
+		$(function() {
+			var timer = null;
+			// url direct jump to comment
+			if(window.location.href.substr(window.location.href.indexOf("#")+1)=="comment") {
+				$('.section-overlay').show();
+				timer = setTimeout(function() {
+					$('#all-section').hide();
+					$('#comment-section').fadeIn();
+				}, 2000);
+			}
+		});
 
 		$(function() {
 			// images preloader
@@ -339,6 +352,7 @@
 		});
 
 		$(function() {
+			// show works item info
 			$('.work-items a').mouseover(function() {
 				$(this).children('div').show();
 			});
@@ -348,7 +362,7 @@
 		});
  
 		$(function() {
-
+			// toggle nav
 			$('#nav-btn').click(function() {
 				$('#scale-nav').slideToggle();
 			});
@@ -359,7 +373,7 @@
 					$('#scale-nav').slideUp();	
 				}
 			});
-
+			// nav responsive
 			$(window).resize(function() {
 				if(Number($(window).width()) >= 768) {
 					$('#scale-nav').slideUp();
@@ -369,6 +383,7 @@
 		});
 
 		$(function() {
+			// music player
 			var status = false,
 				$o = $('audio');
 
@@ -382,20 +397,17 @@
 					$o.get(0).pause();
 					status = false;
 				}
-				
 			});
 
 			if($o.ended) {
 				$('.play-btn img').attr('src', 'images/play.png');
 			}
-			
-
 		});
 
-		$(function() {
-			console.log($.cookie('visited'));
+		// $(function() {
+		// 	console.log($.cookie('visited'));
 			
-		});
+		// });
 
 		$(function() {
 			var timer = null;
@@ -424,6 +436,8 @@
 				$('#all-section').fadeIn();
 			});
 		});
+
+		
 	</script>
 
 </body>
