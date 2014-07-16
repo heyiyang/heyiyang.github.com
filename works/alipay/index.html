@@ -3,9 +3,595 @@
 <head>
 	<meta charset="utf-8">
 	<title>支付宝 知托付！</title>
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/html5shiv.js"></script>
 </head>
 <body>
-	支付宝 知托付！<br>
-	上传中。。。
+	<div class="topbar">
+		<div class="container clearfix">
+			<p class="toplink">
+				<i class="icon-mobile"></i>
+				<a href="#">支付宝钱包</a>
+			</p>
+			<ul class="topmenu clearfix">
+				<li>
+					<a href="#">登录</a
+					><b class="split">-</b
+					><a href="#">注册</a>
+				</li>
+				<li class="topmenu-mid" id="my-alipy">
+					<a href="#" class="my-alipy">
+						<span>我的支付宝<span
+						><i class="icon-dropdown"></i>
+					</a>
+					<div class="topmenu-dropdown">
+						<ul>
+							<li>
+								<a href="#">充值</a>
+							</li>
+							<li>
+								<a href="#">交易记录</a>
+							</li>
+							<li>
+								<a href="#">转账</a>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li class="topmenu-last">
+					<a href="#">帮助中心</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<header class="header">
+		<div class="container">
+			<figure class="flash-logo">
+				<object width="260" height="45" id="logo_swf" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="https://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7" type="application/x-shockwave-flash">
+				                    <param name="movie" value="images/hd.swf">
+				                    <param name="quality" value="High">
+				                    <param name="wmode" value="opaque">
+				                    <param name="allowscriptaccess" value="always">
+				                    <embed width="260" height="45" id="logo_swf" src="images/hd.swf" quality="High" pluginspage="https://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" wmode="opaque" allowscriptaccess="always">
+				                    </object>
+			</figure>
+			<nav class="nav" id="nav">
+				<ul class="clearfix">
+					<li>
+						<a href="#" class="nav-item-father nav-item-one">首页</a>
+					</li>
+					<li>
+						<a href="#"  class="nav-item-father nav-item-two">个人服务</a>
+						<div class="nav-item-sub nav-item-sub1 clearfix">
+							<dl>
+								<dt><a href="#">付款收款</a></dt>
+								<dd><a href="#">转账付款</a></dd>
+								<dd><a href="#">转账到银行卡</a></dd>
+								<dd><a href="#">信用卡还款</a></dd>
+								<dd><a href="#">找人代付</a></dd>
+								<dd><a href="#">收款主页</a></dd>
+								<dd><a href="#">AA收款</a></dd>
+							</dl>
+							<dl>
+								<dt><a href="#">生活助手</a></dt>
+								<dd><a href="#">水电煤缴费</a></dd>
+								<dd><a href="#">手机充值</a></dd>
+								<dd><a href="#">固话宽带</a></dd>
+								<dd><a href="#">有线电视缴费</a></dd>
+								<dd><a href="#">还贷款</a></dd>
+								<dd><a href="#">校园一卡通</a></dd>
+							</dl>
+							<dl>
+								<dt><a href="#">网购返利</a></dt>
+								<dd><a href="#">返利商家</a></dd>
+								<dd><a href="#">优惠券</a></dd>
+								<dd><a href="#">促销活动</a></dd>
+								<dd><a href="#">海淘</a></dd>
+								<dd><a href="#">一淘比价</a></dd>
+								<dd><a href="#">海外转运</a></dd>
+							</dl>
+							<dl class="last">
+								<dt><a href="#">会员账户管理</a></dt>
+								<dd><a href="#">账户管理</a></dd>
+								<dd><a href="#">交易记录</a></dd>
+								<dd><a href="#">支付方式管理</a></dd>
+								<dd><a href="#">账户通</a></dd>
+								<dd><a href="#">集分宝</a></dd>
+								<dd><a href="#">余额宝</a></dd>
+							</dl>
+						</div>
+						<div class="angle"></div>
+					</li>
+					<li>
+						<a href="#"  class="nav-item-father nav-item-three">付款方式</a>
+						<div class="nav-item-sub nav-item-sub2 clearfix">
+							<dl>
+								<dt><a href="#">付款方式介绍</a></dt>
+								<dd><a href="#">支付宝账户余额</a></dd>
+								<dd><a href="#">快捷支付（含卡通）</a></dd>
+								<dd><a href="#">国际银行卡</a></dd>
+								<dd><a href="#">信用卡分期付款</a></dd>
+								<dd><a href="#">找人代付</a></dd>
+								<dd><a href="#">海外用户付款方式</a></dd>
+							</dl>
+							<dl class="last">
+								<dt><a href="#">合作伙伴</a></dt>
+								<dd><a href="#">银行合作伙伴</a></dd>
+								<dd><a href="#">境外合作伙伴</a></dd>
+								<dd><a href="#">其他机构</a></dd>
+								<dd><a href="#">我要合作</a></dd>
+							</dl>
+						</div>
+						<div class="angle"></div>
+					</li>
+					<li>
+						<a href="#"  class="nav-item-father nav-item-four">安全中心</a>
+						<div class="nav-item-sub nav-item-sub3 clearfix">
+							<dl>
+								<dt><a href="#">安全管家</a></dt>
+								<dd><a href="#">安全管家</a></dd>
+							</dl>
+							<dl>
+								<dt><a href="#">安全工具</a></dt>
+								<dd><a href="#">数字证书</a></dd>
+								<dd><a href="#">宝令（手机版）</a></dd>
+								<dd><a href="#">短信校验服务</a></dd>
+								<dd><a href="#">支付盾</a></dd>
+								<dd><a href="#">更多...</a></dd>
+							</dl>
+							<dl>
+								<dt><a href="#">安全联盟</a></dt>
+								<dd><a href="#">浏览器厂商</a></dd>
+								<dd><a href="#">杀毒厂商</a></dd>
+								<dd><a href="#">其他合作</a></dd>
+							</dl>
+							<dl class="last">
+								<dt><a href="#">安全学堂</a></dt>
+								<dd><a href="#">账户资金安全</a></dd>
+								<dd><a href="#">网络交易安全</a></dd>
+								<dd><a href="#">防骗案例</a></dd>
+								<dd><a href="#">新人专区</a></dd>
+							</dl>
+						</div>
+						<div class="angle"></div>
+					</li>
+					<li>
+						<a href="#"  class="nav-item-father nav-item-five">商家服务</a>
+						<div class="nav-item-sub nav-item-sub4 clearfix">
+							<dl>
+								<dt><a href="#">产品商店</a></dt>
+								<dd><a href="#">担保交易</a></dd>
+								<dd><a href="#">即时到帐</a></dd>
+								<dd><a href="#">快捷登录</a></dd>
+								<dd><a href="#">团购收款</a></dd>
+								<dd><a href="#">更多...</a></dd>
+							</dl>
+							<dl>
+								<dt><a href="#">技术支持</a></dt>
+								<dd><a href="#">商户自助集成</a></dd>
+								<dd><a href="#">支付宝协助集成</a></dd>
+								<dd><a href="#">故障申报</a></dd>
+							</dl>
+							<dl>
+								<dt><a href="#">增值服务</a></dt>
+								<dd><a href="#">营销工具</a></dd>
+								<dd><a href="#">第三方工具</a></dd>
+							</dl>
+							<dl class="last">
+								<dt><a href="#">我的商家服务</a></dt>
+								<dd><a href="#">我的订单</a></dd>
+								<dd><a href="#">技术服务</a></dd>
+							</dl>
+						</div>
+						<div class="angle last-angle"></div>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<div class="banner">
+		<div class="login-box">
+			<div class="bg"></div>
+			<div class="login">
+				<h2 class="login-title">登录支付宝</h2>
+				<form>
+					<div class="input-section clearfix">
+						<span class="icon-login icon-name"></span>
+						<input type="text" class="user-name">
+					</div>
+					<div class="input-section input-section-password clearfix">
+						<span class="icon-login icon-password"></span>
+						<input type="text" class="user-password">
+					</div>
+					<p class="forgotP">
+						<a href="#">忘记登录密码？</a>
+					</p>
+					<input type="submit" value="登录" class="login-btn">
+				</form>
+				<div class="accout-server">
+					<a href="#">淘宝会员登录</a>
+					<a href="#" class="mid">账号激活</a>
+					<a href="#"class="last">免费注册</a>
+				</div>
+			</div>
+		</div>
+		<ul class="slide clearfix">
+			<li>
+				<a href="#">
+					<div class="slide-img"></div>
+				</a>
+			</li>
+		</ul>
+		<div class="slide-number-box">
+			<div class="slide-number">
+				<a href="#"></a>
+				<a href="#"></a>
+				<a href="#"></a>
+				<a href="#"></a>
+			</div>
+		</div>
+		<div class="server-link">
+			<ul class="clearfix">
+				<li>
+					<a href="#" class="left">支付宝服务收费规则</a>
+				</li>
+				<li>
+					<a href="#" class="mid">支付宝服务协议</a>
+				</li>
+				<li>
+					<a href="#" class="right">隐私权规则</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<section class="main">
+		<div class="product container clearfix">
+			<article class="product-item">
+				<h2 class="title">
+					<a href="#" class="pay">付款 是件容易的事</a>
+				</h2>
+				<ul class="clearfix">
+					<li class="pay-item-first">
+						<a href="#">付款方式</a>
+					</li>
+					<li>
+						<a href="#">如何海外购物</a>
+					</li>
+					<li>
+						<a href="#">快捷支付特惠</a>
+					</li>
+					<li>
+						<a href="#">更多</a>
+					</li>
+				</ul>
+				<p>
+					<i class="icon-youhui"></i>
+					<a href="#">支付宝全球直购，关注享折扣</a>
+				</p>
+			</article>
+			<article class="product-item">
+				<h2 class="title">
+					<a href="#" class="payback">随时随地 缴纳还款</a>
+				</h2>
+				<ul class="clearfix">
+					<li class="pay-item-first">
+						<a href="#">转账付款</a>
+					</li>
+					<li>
+						<a href="#">水电煤气</a>
+					</li>
+					<li>
+						<a href="#">信用卡还款</a>
+					</li>
+					<li>
+						<a href="#">手机支付</a>
+					</li>
+				</ul>
+				<p>
+					<i class="icon-youhui"></i>
+					<a href="#">浦发快捷，省钱有钱</a>
+				</p>
+			</article>
+			<article class="product-item product-item-last">
+				<h2 class="title">
+					<a href="#" class="safe">会员保障 让您安心支付</a>
+				</h2>
+				<ul class="clearfix">
+					<li class="pay-item-first">
+						<a href="#">了解会员保障</a>
+					</li>
+					<li>
+						<a href="#">安全课堂</a>
+					</li>
+					<li>
+						<a href="#">安全体检</a>
+					</li>
+				</ul>
+				<p>
+					<i class="icon-youhui"></i>
+					<a href="#">安全必备，使命必达</a>
+				</p>
+			</article>
+		</div>
+		<div class="about container clearfix">
+			<article class="about-item">
+				<i class="icon-about icon-about-safety"></i>
+				<h3 class="title title-safety">认识支付宝</h3>
+				<ul class="clearfix">
+					<li class="about-item-sub about-item-sub-first">
+						<a href="#">什么是支付宝</a>
+					</li>
+					<li class="about-item-sub about-item-sub-last">
+						<a href="#">官方微博</a>
+					</li>
+					<li class="follow-wrapper">
+						<a href="#"></a>
+					</li>
+				</ul>
+			</article>
+			<article class="about-item">
+				<i class="icon-about icon-about-vip"></i>
+				<h3 class="title title-vip">最热专题</h3>
+				<ul class="clearfix">
+					<li class="about-item-sub about-item-sub-first">
+						<a href="#">守护英雄</a>
+					</li>
+					<li class="about-item-sub about-item-sub-last">
+						<a href="#">余额宝收益加速</a>
+					</li>
+				</ul>
+			</article>
+			<article class="about-item about-item-last">
+				<i class="icon-about icon-about-abc"></i>
+				<h3 class="title title-abc">3分钟学会支付宝</h3>
+				<ul class="clearfix">
+					<li class="about-item-sub about-item-sub-first">
+						<a href="#">如何购物</a>
+					</li>
+					<li class="about-item-sub">
+						<a href="#">新手须知</a>
+					</li>
+					<li class="about-item-sub about-item-sub-last">
+						<a href="#">我要开店</a>
+					</li>
+				</ul>
+			</article>
+		</div>
+	</section>
+	<footer class="footer">
+		<div class="footer-line"></div>
+		<div class="partner container clearfix">
+			<article class="partner-item">
+				<h4>
+					<span>134 家金融机构</span>
+					<a href="#">银行合作&gt;&gt;</a>
+				</h4>
+				<div class="cnt">
+					<a href="#" class="a"></a>
+				</div>
+			</article>
+			<article class="partner-item">
+				<h4>
+					<span>46 万家商户</span>
+					<a href="#">商家服务&gt;&gt;</a>
+				</h4>
+				<div class="cnt">
+					<a href="#" class="b"></a>
+				</div>
+			</article>
+			<article class="partner-item">
+				<h4>
+					<span>安全支付联盟</span>
+					<a href="#">更多&gt;&gt;</a>
+				</h4>
+				<div class="cnt">
+					<a href="#" class="c"></a>
+				</div>
+			</article>
+			<article class="partner-item partner-item-last">
+				<h4>
+					<span>公告</span>
+				</h4>
+				<ul>
+					<li>
+						<a href="#">关于进一步完善支付账户实名制度的公告</a>
+					</li>
+					<li>
+						<a href="#">禁止将我公司支付服务用于比特币交易的声明</a>
+					</li>
+				</ul>
+			</article>
+		</div>
+		<div class="sitelink container">
+			<ul class="clearfix">
+				<li>
+					<a href="#">关于支付宝</a>
+				</li>
+				<li>
+					<a href="#">官方博客</a>
+				</li>
+				<li>
+					<a href="#">诚征英才</a>
+				</li>
+				<li>
+					<a href="#">联系我们</a>
+				</li>
+				<li>
+					<a href="#">网站地图</a>
+				</li>
+				<li>
+					<a href="#">International Business</a>
+				</li>
+				<li>
+					<a href="#">About Alipay</a>
+				</li>
+				<li class="last">
+					<a href="#">支付宝版权所有 2004-2014 ICP证: 浙B2-20120045</a>
+				</li>
+			</ul>
+			<ul class="clearfix">
+				<li>
+					<a href="#">阿里巴巴集团</a>
+				</li>
+				<li>
+					<a href="#">阿里巴巴国际站</a>
+				</li>
+				<li>
+					<a href="#">阿里巴巴中国站</a>
+				</li>
+				<li>
+					<a href="#">全球速卖通</a>
+				</li>
+				<li>
+					<a href="#">淘宝网</a>
+				</li>
+				<li>
+					<a href="#">天猫</a>
+				</li>
+				<li>
+					<a href="#">聚划算</a>
+				</li>
+				<li>
+					<a href="#">一淘</a>
+				</li>
+				<li>
+					<a href="#">阿里妈妈</a>
+				</li>
+				<li>
+					<a href="#">淘宝旅行</a>
+				</li>
+				<li>
+					<a href="#">虾米</a>
+				</li>
+				<li>
+					<a href="#">阿里云计算</a>
+				</li>
+				<li>
+					<a href="#">云OS</a>
+				</li>
+				<li>
+					<a href="#">万网</a>
+				</li>
+				<li>
+					<a href="#">支付宝</a>
+				</li>
+				<li class="last">
+					<a href="#">来往</a>
+				</li>
+			</ul>
+			<ul class="clearfix">
+				<li>
+					<a href="#">Alibaba Group</a>
+				</li>
+				<li>
+					<a href="#">Alibaba.com International</a>
+				</li>
+				<li>
+					<a href="#">Alibaba.com China</a>
+				</li>
+				<li>
+					<a href="#">AliExpress</a>
+				</li>
+				<li>
+					<a href="#">Taobao Marketplace</a>
+				</li>
+				<li>
+					<a href="#">Tmall.com</a>
+				</li>
+				<li>
+					<a href="#">Juhuasuan</a>
+				</li>
+				<li>
+					<a href="#">eTao</a>
+				</li>
+				<li class="last">
+					<a href="#">Alimama</a>
+				</li>
+			</ul>
+			<ul class="clearfix">
+				<li>
+					<a href="#">Taobao Trip</a>
+				</li>
+				<li>
+					<a href="#">Xiami</a>
+				</li>
+				<li>
+					<a href="#">Alibaba Cloud Computing</a>
+				</li>
+				<li>
+					<a href="#">Yun OS</a>
+				</li>
+				<li>
+					<a href="#">HiChina</a>
+				</li>
+				<li>
+					<a href="#">Alipay</a>
+				</li>
+				<li class="lasst">
+					<a href="#">Laiwang</a>
+				</li>
+			</ul>
+		</div>
+		<div class="auth container">
+			<ul class="clearfix">
+				<li>
+					<a href="#" class="auth-item1">支付业务许可证</a>
+				</li>
+				<li>
+					<a href="#" class="auth-item2">支付宝通过PCI认证</a>
+				</li>
+				<li>
+					<a href="#" class="auth-item3">Visa 验证</a>
+				</li>
+				<li>
+					<a href="#" class="auth-item4">VerSign加密服务</a>
+				</li>
+				<li>
+					<a href="#" class="auth-item5">浙江省网盟</a>
+				</li>
+				<li>
+					<a href="#" class="auth-item6">网络工商</a>
+				</li>
+				<li>
+					<a href="#" class="auth-item7">平平安安</a>
+				</li>
+				<li>
+					<a href="#" class="auth-item8">杭州动态岗亭</a>
+				</li>
+				<li>
+					<a href="#" class="auth-item9">安全防范网</a>
+				</li>
+				<li>
+					<a href="#" class="auth-item10">电子商务协会认证诚信网</a>
+				</li>
+			</ul>
+		</div>
+	</footer>
+	<script>
+		(function() {
+			var oMyAlipy = document.getElementById('my-alipy');
+
+			oMyAlipy.onmouseover = function() {
+				this.className = 'topmenu-mid active';
+			};
+			oMyAlipy.onmouseout = function() {
+				this.className = 'topmenu-mid';
+			};
+		})();
+
+		(function() {
+			var aLi = document.getElementById('nav').getElementsByTagName('li');
+
+			for(var i=0; i<aLi.length; i++) {
+				aLi[i].onmouseover = function() {
+					this.className = 'active';
+				};
+				aLi[i].onmouseout = function() {
+					this.className = '';
+				};
+			}
+		})();
+	</script>
 </body>
 </html>
